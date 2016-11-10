@@ -222,6 +222,8 @@ namespace Construction_Asset_Management_System
             //SqlConnection Connect = new SqlConnection(Conn);
 
             //if (_listviewWorkerCRUD.EditIndex > -1)
+            //
+            //
             //{
             //    Label WORKERIDLabel = (Label)e.Item.FindControl("WORKERIDLabel");
             //    DropDownList _dropdownLaborType = (DropDownList)e.Item.FindControl("_dropdownLaborType");

@@ -1,0 +1,155 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="Construction_Asset_Management_System.SiteMaster" %>
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head runat="server">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%: Page.Title %> - Generic Attendance Monitoring and Equipment Management for Construction Company</title>
+
+    <asp:PlaceHolder runat="server">
+        <%: Scripts.Render("~/bundles/modernizr") %>
+    </asp:PlaceHolder>
+    <webopt:BundleReference runat="server" Path="~/Content/css" />
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+
+
+</head>
+<body>
+    <form runat="server" class="form-horizontal" id="MasterForm">
+        <asp:ScriptManager runat="server">
+            <Scripts>
+                <%--To learn more about bundling scripts in ScriptManager see http://go.microsoft.com/fwlink/?LinkID=301884 --%>
+                <%--Framework Scripts--%>
+                <asp:ScriptReference Name="MsAjaxBundle" />
+                <asp:ScriptReference Name="jquery" />
+                <asp:ScriptReference Name="bootstrap" />
+                <asp:ScriptReference Name="respond" />
+                <asp:ScriptReference Name="WebForms.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebForms.js" />
+                <asp:ScriptReference Name="WebUIValidation.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebUIValidation.js" />
+                <asp:ScriptReference Name="MenuStandards.js" Assembly="System.Web" Path="~/Scripts/WebForms/MenuStandards.js" />
+                <asp:ScriptReference Name="GridView.js" Assembly="System.Web" Path="~/Scripts/WebForms/GridView.js" />
+                <asp:ScriptReference Name="DetailsView.js" Assembly="System.Web" Path="~/Scripts/WebForms/DetailsView.js" />
+                <asp:ScriptReference Name="TreeView.js" Assembly="System.Web" Path="~/Scripts/WebForms/TreeView.js" />
+                <asp:ScriptReference Name="WebParts.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebParts.js" />
+                <asp:ScriptReference Name="Focus.js" Assembly="System.Web" Path="~/Scripts/WebForms/Focus.js" />
+                <asp:ScriptReference Name="WebFormsBundle" />
+                <%--Site Scripts--%>
+            </Scripts>
+        </asp:ScriptManager>
+        <div class="navbar navbar-default navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" runat="server" href="~/" style="align-items: baseline; font-size: 25px">G.A.M.E.M.C.C.</a>
+                </div>
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+
+                        <li><a runat="server" href="Maintenance.aspx" style="font-size: 17px; align-items: baseline">
+                            <img style="float: none; height: 35px;" src="../images/pencil.png">
+                            Maintenance</a></li>
+                        <%--<li class="dropdown">
+                            <a runat="server" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" style="font-size: 17px; align-items: baseline">
+                                <img style="float: none; height: 35px;" src="images/pencil.png">Maintenance<span class="caret"></span></a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li><a href="Worker.aspx">Worker</a></li>
+                                <li><a href="Client.aspx">Client</a></li>
+                                <li><a href="ClientStaff.aspx">Client Staff</a></li>
+                                <li><a href="Material.aspx">Material</a></li>
+                                <li><a href="MaterialCategory.aspx">Material Category</a></li>
+                                <li><a href="Trade.aspx">Trade</a></li>
+                                <li><a href="CompanyStaff.aspx">Company Staff</a></li>
+                            </ul>
+                        </li>--%>
+                        <li><a runat="server" href="Transaction.aspx" style="font-size: 17px; align-items: baseline">
+                            <img style="float: none; height: 35px;" src="../images/handshake.png">
+                            Transaction</a></li>
+
+                        <%--<li class="dropdown">
+                            <a runat="server" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" style="font-size: 17px; align-items: baseline">
+                                <img style="float: none; height: 35px;" src="images/handshake.png">Transaction<span class="caret"></span></a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li><a href="Project.aspx">Inquire Project</a></li>
+                                <li><a href="ProjectRequirement.aspx">Project Requirement</a></li>
+                                <li><a href="#">Project Specification</a></li>
+                                <li><a href="TradeHandling.aspx">Trade Handling</a></li>
+                                <li><a href="#">Attendance Processing</a></li>
+                                <li><a href="MaterialStash_CRUD.aspx">Material Stash</a></li>
+                            </ul>
+                        </li>--%>
+
+                        <li><a runat="server" href="~/About" style="font-size: 17px; align-items: baseline">
+                            <img style="float: none; height: 35px;" src="../images/dog.png">
+                            About</a></li>
+                        <%--<li><a runat="server" href="~/Contact" style="font-size: 17px; align-items: baseline">
+                            <img style="float: none; height: 35px;" src="../images/telephone.png">
+                            Contact</a></li>--%>
+                        <li><a runat="server" href="~/Reports" style="font-size: 17px; align-items: baseline">
+                            <img style="float: none; height: 35px;" src="../images/chart.png">
+                            Reports</a></li>
+                    </ul>
+                    <asp:LoginView runat="server" ViewStateMode="Disabled">
+                        <AnonymousTemplate>
+                            <ul class="nav navbar-nav navbar-right">
+                                <li><a runat="server" href="~/Account/Register" style="font-size: 17px; align-items: baseline">
+                                    <img style="float: none; height: 35px;" src="../images/monkey.png">
+                                    Register</a></li>
+                                <li><a runat="server" href="~/Account/Login" style="font-size: 17px; align-items: baseline">
+                                    <img style="float: none; height: 35px;" src="../images/guestbook.png"></span> Log in</a></li>
+                            </ul>
+                        </AnonymousTemplate>
+                        <LoggedInTemplate>
+                            <ul class="nav navbar-nav navbar-right">
+                                <li><a runat="server" href="~/Account/Manage" title="Manage your account">Hello, <%: Context.User.Identity.GetUserName()  %> !</a></li>
+                                <li>
+                                    <asp:LoginStatus runat="server" LogoutAction="Redirect" LogoutText="Log off" LogoutPageUrl="~/Account/Login.aspx" OnLoggingOut="Unnamed_LoggingOut" />
+                                </li>
+                            </ul>
+                        </LoggedInTemplate>
+                    </asp:LoginView>
+                </div>
+            </div>
+        </div>
+        <br />
+        <br />
+        <div class="row">
+            <br />
+            <asp:ContentPlaceHolder ID="MainContent" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+        <div class="text-center">
+            <hr />
+            <footer>
+                <p>&copy; <%: DateTime.Now.Year %> - Atlantis. All Rights Reserved. </p>
+            </footer>
+        </div>
+    </form>
+</body>
+
+
+<script>
+
+    (function () {
+        $(window).scroll(function () {
+
+            // check if window scroll for more than 430px. May vary
+            // as per the height of your main banner.
+
+            if ($(this).scrollTop() > 430) {
+                $('.navbar').addClass('opaque'); // adding the opaque class
+            } else {
+                $('.navbar').removeClass('opaque'); // removing the opaque class
+            }
+        });
+    })();
+
+</script>
+
+
+</html>

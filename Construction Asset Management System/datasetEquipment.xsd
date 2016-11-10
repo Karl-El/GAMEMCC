@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="datasetEquipment" targetNamespace="http://tempuri.org/datasetEquipment.xsd" xmlns:mstns="http://tempuri.org/datasetEquipment.xsd" xmlns="http://tempuri.org/datasetEquipment.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" GeneratorFunctionsComponentClassName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" UserFunctionsComponentName="QueriesTableAdapter" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Web.config" AppSettingsPropertyName="ConnString_WEB_ASSET_DB" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="ConnString_WEB_ASSET_DB (Web.config)" ParameterPrefix="@" PropertyReference="AppConfig.System.Configuration.ConfigurationManager.0.ConnectionStrings.ConnString_WEB_ASSET_DB.ConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="EQUIPMENTTableAdapter" GeneratorDataComponentClassName="EQUIPMENTTableAdapter" Name="EQUIPMENT" UserDataComponentName="EQUIPMENTTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ConnString_WEB_ASSET_DB (Web.config)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        EQUIPMENT.EQUIPMENTNAME, CAST(EQUIPMENT.QUANTITY AS INT) AS QUANTITY, CAST(EQUIPMENT.INUSE AS INT) AS INUSE, CAST(EQUIPMENT.STOCK AS INT) AS STOCK, 
+                         EQUIPCTGRY.EQUIPCTGRYNAME
+FROM            EQUIPMENT INNER JOIN
+                         EQUIPCTGRY ON EQUIPMENT.EQUIPCTGRYID = EQUIPCTGRY.EQUIPCTGRYID</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="EQUIPMENTNAME" DataSetColumn="EQUIPMENTNAME" />
+              <Mapping SourceColumn="EQUIPCTGRYNAME" DataSetColumn="EQUIPCTGRYNAME" />
+              <Mapping SourceColumn="QUANTITY" DataSetColumn="QUANTITY" />
+              <Mapping SourceColumn="INUSE" DataSetColumn="INUSE" />
+              <Mapping SourceColumn="STOCK" DataSetColumn="STOCK" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="datasetEquipment" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="datasetEquipment" msprop:Generator_UserDSName="datasetEquipment">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="EQUIPMENT" msprop:Generator_TableClassName="EQUIPMENTDataTable" msprop:Generator_TableVarName="tableEQUIPMENT" msprop:Generator_RowChangedName="EQUIPMENTRowChanged" msprop:Generator_TablePropName="EQUIPMENT" msprop:Generator_RowDeletingName="EQUIPMENTRowDeleting" msprop:Generator_RowChangingName="EQUIPMENTRowChanging" msprop:Generator_RowEvHandlerName="EQUIPMENTRowChangeEventHandler" msprop:Generator_RowDeletedName="EQUIPMENTRowDeleted" msprop:Generator_RowClassName="EQUIPMENTRow" msprop:Generator_UserTableName="EQUIPMENT" msprop:Generator_RowEvArgName="EQUIPMENTRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="EQUIPMENTNAME" msprop:Generator_ColumnVarNameInTable="columnEQUIPMENTNAME" msprop:Generator_ColumnPropNameInRow="EQUIPMENTNAME" msprop:Generator_ColumnPropNameInTable="EQUIPMENTNAMEColumn" msprop:Generator_UserColumnName="EQUIPMENTNAME" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="EQUIPCTGRYNAME" msprop:Generator_ColumnVarNameInTable="columnEQUIPCTGRYNAME" msprop:Generator_ColumnPropNameInRow="EQUIPCTGRYNAME" msprop:Generator_ColumnPropNameInTable="EQUIPCTGRYNAMEColumn" msprop:Generator_UserColumnName="EQUIPCTGRYNAME" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="QUANTITY" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnQUANTITY" msprop:Generator_ColumnPropNameInRow="QUANTITY" msprop:Generator_ColumnPropNameInTable="QUANTITYColumn" msprop:Generator_UserColumnName="QUANTITY" type="xs:int" minOccurs="0" />
+              <xs:element name="INUSE" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnINUSE" msprop:Generator_ColumnPropNameInRow="INUSE" msprop:Generator_ColumnPropNameInTable="INUSEColumn" msprop:Generator_UserColumnName="INUSE" type="xs:int" minOccurs="0" />
+              <xs:element name="STOCK" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnSTOCK" msprop:Generator_ColumnPropNameInRow="STOCK" msprop:Generator_ColumnPropNameInTable="STOCKColumn" msprop:Generator_UserColumnName="STOCK" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

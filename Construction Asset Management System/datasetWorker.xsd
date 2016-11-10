@@ -1,0 +1,121 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="datasetWorker" targetNamespace="http://tempuri.org/datasetWorker.xsd" xmlns:mstns="http://tempuri.org/datasetWorker.xsd" xmlns="http://tempuri.org/datasetWorker.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Web.config" AppSettingsPropertyName="ConnString_WEB_ASSET_DB" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="ConnString_WEB_ASSET_DB (Web.config)" ParameterPrefix="@" PropertyReference="AppConfig.System.Configuration.ConfigurationManager.0.ConnectionStrings.ConnString_WEB_ASSET_DB.ConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="WORKERTableAdapter" GeneratorDataComponentClassName="WORKERTableAdapter" Name="WORKER" UserDataComponentName="WORKERTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ConnString_WEB_ASSET_DB (Web.config)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        WORKER.WORKERLNAME + ', ' + WORKER.WORKERFNAME AS FULLNAME, WORKER.WORKERDOB, WORKER.WORKERADDR, WORKER.WORKERCITY, WORKER.WORKERPROV, WORKER.WORKEREMAIL, 
+                         WORKER.WORKERCELL, WORKER.WORKERSTATUS, WORKER.WORKEREMPLOYTYPE, WORKER.ASSWORKER, LABORTYPE.LABORTYPENAME
+FROM            WORKER INNER JOIN
+                         LABORTYPE ON WORKER.LABORTYPEID = LABORTYPE.LABORTYPEID</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="FULLNAME" DataSetColumn="FULLNAME" />
+              <Mapping SourceColumn="WORKERDOB" DataSetColumn="WORKERDOB" />
+              <Mapping SourceColumn="WORKERADDR" DataSetColumn="WORKERADDR" />
+              <Mapping SourceColumn="WORKERCITY" DataSetColumn="WORKERCITY" />
+              <Mapping SourceColumn="WORKERPROV" DataSetColumn="WORKERPROV" />
+              <Mapping SourceColumn="WORKEREMAIL" DataSetColumn="WORKEREMAIL" />
+              <Mapping SourceColumn="WORKERCELL" DataSetColumn="WORKERCELL" />
+              <Mapping SourceColumn="WORKERSTATUS" DataSetColumn="WORKERSTATUS" />
+              <Mapping SourceColumn="WORKEREMPLOYTYPE" DataSetColumn="WORKEREMPLOYTYPE" />
+              <Mapping SourceColumn="ASSWORKER" DataSetColumn="ASSWORKER" />
+              <Mapping SourceColumn="LABORTYPENAME" DataSetColumn="LABORTYPENAME" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="datasetWorker" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="datasetWorker" msprop:Generator_UserDSName="datasetWorker">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="WORKER" msprop:Generator_TableClassName="WORKERDataTable" msprop:Generator_TableVarName="tableWORKER" msprop:Generator_TablePropName="WORKER" msprop:Generator_RowDeletingName="WORKERRowDeleting" msprop:Generator_RowChangingName="WORKERRowChanging" msprop:Generator_RowEvHandlerName="WORKERRowChangeEventHandler" msprop:Generator_RowDeletedName="WORKERRowDeleted" msprop:Generator_UserTableName="WORKER" msprop:Generator_RowChangedName="WORKERRowChanged" msprop:Generator_RowEvArgName="WORKERRowChangeEvent" msprop:Generator_RowClassName="WORKERRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="FULLNAME" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnFULLNAME" msprop:Generator_ColumnPropNameInRow="FULLNAME" msprop:Generator_ColumnPropNameInTable="FULLNAMEColumn" msprop:Generator_UserColumnName="FULLNAME" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="402" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="WORKERDOB" msprop:Generator_ColumnVarNameInTable="columnWORKERDOB" msprop:Generator_ColumnPropNameInRow="WORKERDOB" msprop:Generator_ColumnPropNameInTable="WORKERDOBColumn" msprop:Generator_UserColumnName="WORKERDOB" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="WORKERADDR" msprop:Generator_ColumnVarNameInTable="columnWORKERADDR" msprop:Generator_ColumnPropNameInRow="WORKERADDR" msprop:Generator_ColumnPropNameInTable="WORKERADDRColumn" msprop:Generator_UserColumnName="WORKERADDR" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="WORKERCITY" msprop:Generator_ColumnVarNameInTable="columnWORKERCITY" msprop:Generator_ColumnPropNameInRow="WORKERCITY" msprop:Generator_ColumnPropNameInTable="WORKERCITYColumn" msprop:Generator_UserColumnName="WORKERCITY" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="WORKERPROV" msprop:Generator_ColumnVarNameInTable="columnWORKERPROV" msprop:Generator_ColumnPropNameInRow="WORKERPROV" msprop:Generator_ColumnPropNameInTable="WORKERPROVColumn" msprop:Generator_UserColumnName="WORKERPROV" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="WORKEREMAIL" msprop:Generator_ColumnVarNameInTable="columnWORKEREMAIL" msprop:Generator_ColumnPropNameInRow="WORKEREMAIL" msprop:Generator_ColumnPropNameInTable="WORKEREMAILColumn" msprop:Generator_UserColumnName="WORKEREMAIL" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="WORKERCELL" msprop:Generator_ColumnVarNameInTable="columnWORKERCELL" msprop:Generator_ColumnPropNameInRow="WORKERCELL" msprop:Generator_ColumnPropNameInTable="WORKERCELLColumn" msprop:Generator_UserColumnName="WORKERCELL" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="WORKERSTATUS" msprop:Generator_ColumnVarNameInTable="columnWORKERSTATUS" msprop:Generator_ColumnPropNameInRow="WORKERSTATUS" msprop:Generator_ColumnPropNameInTable="WORKERSTATUSColumn" msprop:Generator_UserColumnName="WORKERSTATUS" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="WORKEREMPLOYTYPE" msprop:Generator_ColumnVarNameInTable="columnWORKEREMPLOYTYPE" msprop:Generator_ColumnPropNameInRow="WORKEREMPLOYTYPE" msprop:Generator_ColumnPropNameInTable="WORKEREMPLOYTYPEColumn" msprop:Generator_UserColumnName="WORKEREMPLOYTYPE" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ASSWORKER" msprop:Generator_ColumnVarNameInTable="columnASSWORKER" msprop:Generator_ColumnPropNameInRow="ASSWORKER" msprop:Generator_ColumnPropNameInTable="ASSWORKERColumn" msprop:Generator_UserColumnName="ASSWORKER" type="xs:boolean" minOccurs="0" />
+              <xs:element name="LABORTYPENAME" msprop:Generator_ColumnVarNameInTable="columnLABORTYPENAME" msprop:Generator_ColumnPropNameInRow="LABORTYPENAME" msprop:Generator_ColumnPropNameInTable="LABORTYPENAMEColumn" msprop:Generator_UserColumnName="LABORTYPENAME" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

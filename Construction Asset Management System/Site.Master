@@ -16,8 +16,21 @@
 
 
 </head>
-<body>
-    <form runat="server" class="form-horizontal" id="MasterForm">
+<body><script type="text/javascript">
+        function ShowLoading(e) {
+            var div = document.createElement('div');
+            var img = document.createElement('img');
+            //img.src = '../Images/loader3.gif';
+            div.innerHTML = "<br /><br /><br /><br /><br /><br /><br /><br /><br />";
+            div.style.cssText = 'position: fixed; left: 0px; top: 0px; width: 100%; height: 100%; z-index: 9999; background: url("../images/loader3.gif") center no-repeat rgba(255, 255, 255, 0.52)';
+            div.appendChild(img);
+            document.body.appendChild(div);
+            // These 2 lines cancel form submission, so only use if needed.
+            //window.event.cancelBubble = true;
+            //e.stopPropagation();
+        }
+    </script>
+    <form runat="server" class="form-horizontal" id="MasterForm" onsubmit="ShowLoading()">
         <asp:ScriptManager runat="server">
             <Scripts>
                 <%--To learn more about bundling scripts in ScriptManager see http://go.microsoft.com/fwlink/?LinkID=301884 --%>

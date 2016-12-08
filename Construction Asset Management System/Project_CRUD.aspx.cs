@@ -34,6 +34,22 @@ namespace Construction_Asset_Management_System
                 }
             }
         }
+        public static void LabelCssClass(Control root)
+        {
+            foreach (Control control in root.Controls)
+            {
+                if (control is Label)
+                {
+                    var label = control as Label;
+                    label.CssClass="control-label"
+                }
+                else
+                {
+                    LabelCssClass(control);
+                }
+            }
+        }
+
 
 
         protected void _listviewProjectCRUD_ItemUpdated(object sender, ListViewUpdatedEventArgs e)

@@ -19,6 +19,7 @@
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -244,6 +245,7 @@
     <Content Include="images\googleflat4.jpg" />
     <Content Include="images\grey.jpg" />
     <Content Include="images\loader.gif" />
+    <Content Include="images\loader3.gif" />
     <Content Include="images\tools.jpg" />
     <Content Include="Important Queries.txt" />
     <Content Include="Maintenance.aspx" />

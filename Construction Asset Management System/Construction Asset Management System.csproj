@@ -234,6 +234,7 @@
     <Content Include="images\attend.png" />
     <Content Include="images\backhoe.png" />
     <Content Include="images\BG.png" />
+    <Content Include="images\box.gif" />
     <Content Include="images\CAMS.png" />
     <Content Include="images\cityblack.jpg" />
     <Content Include="images\citywhite.jpg" />

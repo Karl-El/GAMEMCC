@@ -41,7 +41,7 @@ namespace Construction_Asset_Management_System
                 if (control is Label)
                 {
                     var label = control as Label;
-                    label.CssClass="control-label"
+                    label.CssClass = "control-label";
                 }
                 else
                 {

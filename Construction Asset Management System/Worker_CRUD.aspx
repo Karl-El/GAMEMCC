@@ -16,6 +16,7 @@
                     <h4 class="bg-info text-center" style="padding: 8px">Personal Details</h4>
                     <p class="col-sm-3">
                         <label class="control-label">Add Image:</label>
+                        <label class="control-label">Add Image:</label>
                         <span>
                             <%--<asp:Image runat="server" ImageUrl='<%# Eval("MATERIALIMG") %>' CssClass="img-responsive img-thumbnail center-block" AlternateText="Not Available" Width="100" Height="100" />--%>
                             <asp:FileUpload ID="_fileupImage" runat="server" />
